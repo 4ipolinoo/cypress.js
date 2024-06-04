@@ -28,7 +28,7 @@ describe('Проверка авторизации', function () {
 
      it('Неверный логин и верный пароль', function () {
         cy.visit('https://login.qa.studio');
-        cy.get('#mail').type ('jhguyfuyf@47.ru');
+        cy.get('#mail').type ('nepravilniylogin@nety.ru');
         cy.get('#pass').type ('iLoveqastudio1');
         cy.get('#loginButton').click();
         cy.get('#messageHeader').contains('Такого логина или пароля нет');
@@ -44,7 +44,7 @@ describe('Проверка авторизации', function () {
 
      it('Логин приведение к строчным буквам логине и верный пароль', function () {
         cy.visit('https://login.qa.studio');
-        cy.get('#mail').type ('GerMan@Dolnikov.ru');
+        cy.get('#mail').type ('GeRman@Dolnikov.ru');
         cy.get('#pass').type ('iLoveqastudio1');
         cy.get('#loginButton').click();
         cy.get('#messageHeader').contains('Такого логина или пароля нет');
